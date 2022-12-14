@@ -3,11 +3,11 @@ public class Laptop {
     private String model;
     private int resolution;
     private int frequency;
-    private int coresNum;
+    private int coresAmmount;
     private String driveType;
     private int driveSize;
     private int RAM;
-    private int videoMem;
+    private int videoMemory;
     private int price;
 
     public Laptop(String brand, String model, int resolution, int frequency, int coresNum, String driveType,
@@ -16,11 +16,11 @@ public class Laptop {
         this.model = model;
         this.resolution = resolution;
         this.frequency = frequency;
-        this.coresNum = coresNum;
+        this.coresAmmount = coresNum;
         this.driveType = driveType;
         this.driveSize = driveSize;
         RAM = rAM;
-        this.videoMem = videoMem;
+        this.videoMemory = videoMem;
         this.price = price;
     }
 
@@ -40,8 +40,8 @@ public class Laptop {
         return frequency;
     }
 
-    public int getCoresNum() {
-        return coresNum;
+    public int getCoresAmmount() {
+        return coresAmmount;
     }
 
     public String getDriveType() {
@@ -64,8 +64,8 @@ public class Laptop {
         RAM = rAM;
     }
 
-    public int getVideoMem() {
-        return videoMem;
+    public int getVideoMemory() {
+        return videoMemory;
     }
 
     public int getPrice() {
@@ -79,8 +79,8 @@ public class Laptop {
     @Override
     public String toString() {
         return "Laptop [brand=" + brand + ", model=" + model + ", resolution=" + resolution + ", frequency=" + frequency
-                + ", coresNum=" + coresNum + ", driveType=" + driveType + ", driveSize=" + driveSize + ", RAM=" + RAM
-                + ", videoMem=" + videoMem + ", price=" + price + "]";
+                + ", coresNum=" + coresAmmount + ", driveType=" + driveType + ", driveSize=" + driveSize + ", RAM=" + RAM
+                + ", videoMem=" + videoMemory + ", price=" + price + "]";
     }
 
     @Override
@@ -91,11 +91,11 @@ public class Laptop {
         result = prime * result + ((model == null) ? 0 : model.hashCode());
         result = prime * result + resolution;
         result = prime * result + frequency;
-        result = prime * result + coresNum;
+        result = prime * result + coresAmmount;
         result = prime * result + ((driveType == null) ? 0 : driveType.hashCode());
         result = prime * result + driveSize;
         result = prime * result + RAM;
-        result = prime * result + videoMem;
+        result = prime * result + videoMemory;
         result = prime * result + price;
         return result;
     }
@@ -123,7 +123,7 @@ public class Laptop {
             return false;
         if (frequency != other.frequency)
             return false;
-        if (coresNum != other.coresNum)
+        if (coresAmmount != other.coresAmmount)
             return false;
         if (driveType == null) {
             if (other.driveType != null)
@@ -134,7 +134,7 @@ public class Laptop {
             return false;
         if (RAM != other.RAM)
             return false;
-        if (videoMem != other.videoMem)
+        if (videoMemory != other.videoMemory)
             return false;
         if (price != other.price)
             return false;

@@ -120,19 +120,19 @@ public class master {
                 System.out.println("Частота обновления не может быть отрицательной!");
             }
         }
-        int coresNumFilter = 12313131;
-        while (coresNumFilter == 12313131) {
+        int coresAmmountFilter = 12313131;
+        while (coresAmmountFilter == 12313131) {
             System.out
                     .println("Введите минимальное количество ядер процессора (0-если желаете пропустить этот вопрос):");
             String temp = scanner.nextLine();
             try {
-                coresNumFilter = Integer.parseInt(temp);
+                coresAmmountFilter = Integer.parseInt(temp);
 
             } catch (Exception e) {
                 System.out.println("Проверьте правильность ввода!");
             }
-            if (coresNumFilter < 0) {
-                coresNumFilter = 12313131;
+            if (coresAmmountFilter < 0) {
+                coresAmmountFilter = 12313131;
                 System.out.println("количество ядер не может быть отрицательным!");
             }
         }
@@ -191,18 +191,18 @@ public class master {
             }
         }
 
-        int videoMemFilter = 12313131;
-        while (videoMemFilter == 12313131) {
+        int videoMemoryFilter = 12313131;
+        while (videoMemoryFilter == 12313131) {
             System.out.println("Введите минимальный объем видеопамяти, ГБ (0-если желаете пропустить этот вопрос):");
             String temp = scanner.nextLine();
             try {
-                videoMemFilter = Integer.parseInt(temp);
+                videoMemoryFilter = Integer.parseInt(temp);
 
             } catch (Exception e) {
                 System.out.println("Проверьте правильность ввода!");
             }
-            if (videoMemFilter < 0) {
-                videoMemFilter = 12313131;
+            if (videoMemoryFilter < 0) {
+                videoMemoryFilter = 12313131;
                 System.out.println("Объем видеопамяти не может быть отрицательным!");
             }
         }
@@ -232,7 +232,7 @@ public class master {
             if (frequencyFilter > lap.getFrequency()) {
                 continue;
             }
-            if (coresNumFilter > lap.getCoresNum()) {
+            if (coresAmmountFilter > lap.getCoresAmmount()) {
                 continue;
             }
             if (driveTypeFilter != null && !driveTypeFilter.equals(lap.getDriveType())) {
@@ -244,7 +244,7 @@ public class master {
             if (RamFilter > lap.getRAM()) {
                 continue;
             }
-            if (videoMemFilter > lap.getVideoMem()) {
+            if (videoMemoryFilter > lap.getVideoMemory()) {
                 continue;
             }
             if (maxPrice != 0 && maxPrice < lap.getPrice()) {
